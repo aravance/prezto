@@ -203,7 +203,7 @@ function expand-or-complete-with-indicator {
   zstyle -s ':prezto:module:editor:info:completing' format 'indicator'
   print -Pn "$indicator"
   zle expand-or-complete
-  zle redisplay
+  #zle redisplay
 }
 zle -N expand-or-complete-with-indicator
 

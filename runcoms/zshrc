@@ -11,3 +11,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+export DEV_DSK=`host aavance.aka.corp.amazon.com | grep alias | awk 'NF>1{print substr($NF,1,length($NF)-1)}'`
+
+#export ZSH_THEME_TIME_UPDATE_ENABLED=false
+
+autoload colors && colors
+autoload -Uz promptinit
+promptinit
+prompt time
